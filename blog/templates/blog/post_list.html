@@ -8,21 +8,26 @@
         </div>
 
         <div>
-            <p>published: 27.06.2021, 20:15</p>
-            <h2><a href=""Первый пост</a></h2>
-            <p><strong>Here we now!</strong></p>
-            <p>Вот и первый пост Project.</p>
+            <h1><a href="/">Django Girls Blog</a></h1>
         </div>
+
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
 
         <div>
             <p>published: 27.06.2021, 20:30</p>
-            <h2><a href="">Второй пост</a></h2>
-            <p>Давайте же приступим к нашей совместной, большой работе.</p>
+            <h2><a href="">Третий пост Project</a></h2>
+            <p>Давайте же приступим к нашей совместной большой работе.</p>
         </div>
 
         <div>
           <p>published: 27.06.2021, 20:32</p>
-          <h2><a href ="">Третий пост</a></h2>
+          <h2><a href ="">Четвертый пост Project</a></h2>
           <p> Наша работа в связах.</p>
           <p> Project - это связь.</p>
     </body>
